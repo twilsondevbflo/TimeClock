@@ -16,9 +16,9 @@ namespace TimeClock.Services
             {
                 if (userId > 0)
                 {
-                
+
                     history = engine.ReadFileAsList(logLocation).Where(x => x.Id == userId).ToList();
-                   
+
                 }
                 else
                 {

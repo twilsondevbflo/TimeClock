@@ -35,7 +35,7 @@ namespace TimeClock.Services
         public bool IsUser(int userId)
         {
             //logic to see if the user exists by Id
-          
+
 
             if (MockData.GetUserDB().Any(x => x.Id == userId))
             {
@@ -46,7 +46,7 @@ namespace TimeClock.Services
                 return false;
             }
         }
-        public User StartShift(User user , UserStatus startShiftType)
+        public User StartShift(User user, UserStatus startShiftType)
         {
             StatusChangeResult result = startShiftType switch
             {
@@ -56,7 +56,7 @@ namespace TimeClock.Services
                 _ => throw new NotImplementedException()
 
             };
-            
+
             if (result.ChangedStatus)
             {
                 UpdateUser(result, user);
@@ -97,6 +97,6 @@ namespace TimeClock.Services
             user.ShiftEnd = result.ShiftEnd.ConvertStringToDate();
             user.Message = result.Message;
         }
-      
+
     }
 }
