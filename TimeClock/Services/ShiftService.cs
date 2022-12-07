@@ -10,7 +10,7 @@ namespace TimeClock.Services
     {
         private readonly ILogging _logging;
         private readonly DateTime maxDate = new DateTime(9999, 12, 31);
-       
+
         public ShiftService(ILogging logging)
         {
             _logging = logging;
@@ -69,7 +69,7 @@ namespace TimeClock.Services
             };
 
             if (user.Status == UserStatus.Offline || user.Status == UserStatus.Break || user.Status == UserStatus.Lunch)
-            { 
+            {
                 result.ChangedStatus = false;
                 result.StatusChangeTime = tStamp.ConvertDateToString();
                 result.ShiftStart = user.ShiftStart.ConvertDateToString();
@@ -223,7 +223,7 @@ namespace TimeClock.Services
                 OldStatus = user.Status,
                 Id = user.Id
             };
-       
+
             if (user.Status == UserStatus.Offline || user.Status == UserStatus.Active || user.Status == UserStatus.Break)
             {
 

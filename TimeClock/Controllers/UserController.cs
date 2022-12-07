@@ -13,7 +13,7 @@ namespace TimeClock.Controllers
         public UserController(IUserService userSerivce, IShiftService shiftService)
         {
             _userService = userSerivce;
-        }     
+        }
 
         [HttpGet("User/Login")]
         public string Login(int userId)
@@ -25,7 +25,7 @@ namespace TimeClock.Controllers
             else
             {
                 return $"Could Not Login with Id {userId}";
-            }            
+            }
         }
 
         [HttpGet("User/GetHistory")]
@@ -36,7 +36,7 @@ namespace TimeClock.Controllers
 
         [HttpPost("User/StartShift")]
         public User StartShift([FromBody] User user)
-        {    
+        {
             user = _userService.StartShift(user, UserStatus.Active);
             return user;
         }

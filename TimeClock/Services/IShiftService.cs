@@ -10,6 +10,5 @@ namespace TimeClock.Services
         StatusChangeResult CheckEndBreak(User user);
         StatusChangeResult CheckStartLunch(User user);
         StatusChangeResult CheckEndLunch(User user);
-
     }
 }

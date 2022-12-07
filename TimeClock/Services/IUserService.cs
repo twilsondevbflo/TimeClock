@@ -9,7 +9,6 @@ namespace TimeClock.Services
         IEnumerable<StatusChangeResult> GetUserHistory(int userId);
         public IEnumerable<User> GetUsers();
         public User StartShift(User user, UserStatus startShiftType);
-        public User EndShift(User user, UserStatus endShiftType);
-        
+        public User EndShift(User user, UserStatus endShiftType);        
     }
 }
