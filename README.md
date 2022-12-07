@@ -23,11 +23,11 @@ EndShift,EndBreak,EndLunch -
 Similar functionality to the "start" but attempts to end the shift based on the User object's current status
 
 
-Statuses | Values
-Offline  | 0
-Active   | 1
-Break    | 2
-Lunch    | 3
+Status:Value
+Offline:0
+Active :1
+Break  :2
+Lunch  :3
 
 
 
