@@ -52,7 +52,7 @@ namespace TimeClock.Services
             {
                 UserStatus.Active => _shiftService.CheckStartShift(user),
                 UserStatus.Break => _shiftService.CheckStartBreak(user),
-                UserStatus.Lunch => _shiftService.CheckStartBreak(user),
+                UserStatus.Lunch => _shiftService.CheckStartLunch(user),
                 _ => throw new NotImplementedException()
 
             };
